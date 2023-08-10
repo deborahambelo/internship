@@ -1,0 +1,162 @@
+body{
+   height: 100vh;
+  margin: 0;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+
+.header{
+    font-size: 2rem; 
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    width: 100%;
+    margin-top: 0;
+}
+
+.icon{
+   font-size: 1rem;
+    margin-right: 10px;
+
+}
+
+.frontimage{
+    width: 400px;
+    height: 290px;
+    box-shadow: 0 0 10px 0 rgba(22,23,77,.2);
+    border-radius: 6px 6px 6px 6px;
+    overflow: hidden;
+    margin: 20px;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.uploadarea{
+    width: 400px;
+    height: 290px;
+    box-shadow: 0 0 10px 0 rgba(22,23,77,.2);
+    border-radius: 6px 6px 6px 6px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(22,23,77,.2);
+    margin: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.uploadarea:hover{
+    
+     transform: scale(1.05); /* Scale up the div by 10% on hover */
+    
+}
+
+.mainpage{
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+
+}
+
+
+
+.file-input-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Set the desired height of the container */
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+ 
+    transition: background 0.3s ease, transform 0.3s ease; /* Add transform to the transition */
+}
+
+@media screen and (max-width: 830px){
+    .uploadarea{
+       flex: 3;
+        position: absolute;
+        top: 350px;
+        left: 50px;
+        width: 360px;
+        height: 180px;
+     }
+    
+     body{
+        display: flex;
+     
+     }
+    
+     .frontimage{
+     position: absolute;
+      top: 80px;
+      left: 50px;
+        flex: 1;
+        width: 360px;
+      height: 250px;
+      display: block;
+      box-sizing: border-box;
+    }
+}
+
+
+
+

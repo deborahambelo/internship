@@ -5,8 +5,53 @@
     <title>Image Background Remover</title>
     <link rel="stylesheet" href="bgremover.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- JavaScript to handle image upload -->
+    <script>
+      function handleImageUpload() {
+        const fileInput = document.getElementById("file-input");
+        const selectedFile = fileInput.files[0];
+        if (selectedFile) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            const imageData = event.target.result;
+            localStorage.setItem("uploadedImage", imageData);
+            window.location.href = "display.html";
+          };
+          reader.readAsDataURL(selectedFile);
+        }
+      }
+    </script>
   </head>
   <body>
-    <h2>Image Background Remover</h2>
+    <div class="wholelayout">
+      <div class="header">
+        <span class="icon">
+          <img src="favicon-32x32.png" alt="A camera" />
+        </span>
+        <header>Image Background Remover</header>
+      </div>
+      <div class="mainpage">
+        <div class="frontimage">
+          <img src="frontimage.jpg" />
+        </div>
+        <div class="uploadarea">
+          <div class="file-input-container">
+            <!-- First HTML Page -->
+            <form>
+              <input
+                type="file"
+                id="file-input"
+                name="imageFile"
+                accept="image/jpeg, image/png"
+                size="1048576"
+                onchange="handleImageUpload()"
+              />
+              <button type="submit" class="custom-button">Upload Image</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

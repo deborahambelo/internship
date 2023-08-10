@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Display Image</title>
+    <style>
+      /* Add some styling to center the image and set its max width */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .image-container {
+        max-width: 40%; /* Adjust this value as needed */
+        padding: 10px;
+        text-align: center;
+        margin-left: 5%;
+      }
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+      .image-container h2 {
+        margin: 10px 0;
+      }
+      .image-container:first-child {
+        border-right: 1px solid #ccc;
+      }
+      #image-container {
+        max-width: 80%; /* Adjust this value as needed */
+      }
+      #selected-image {
+        width: 100%; /* Image will fill the container */
+        height: auto; /* Maintain aspect ratio */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--<div class="image-container">
+      <h2>Original Image</h2>
+      <img src="uploadedImage.jpg" alt="Original Image" />
+    </div>
+    <div class="image-container">
+      <h2>Processed Image</h2>
+      <img src="processedImage.jpg" alt="Processed Image" />
+    </div>
+    <script>
+      const uploadedImage = localStorage.getItem("uploadedImage");
+      if (uploadedImage) {
+        const imageElement = document.getElementById("uploaded-image");
+        imageElement.src = uploadedImage;
+      }
+    </script>-->
+    <div class="image-container">
+      <h2>Original Image</h2>
+      <img id="originalImage" alt="Original Image" />
+    </div>
+    <div class="image-container">
+      <h2>Processed Image</h2>
+      <img id="processedImage" alt="Processed Image" />
+    </div>
+
+    <script>
+      // Retrieve and display original image
+      const originalImage = document.getElementById("originalImage");
+      const originalImageData = localStorage.getItem("uploadedImage");
+      if (originalImageData) {
+        originalImage.src = originalImageData;
+      }
+
+      // Retrieve and display processed image
+      const processedImage = document.getElementById("processedImage");
+      const processedImageData = localStorage.getItem("processedImage");
+      if (processedImageData) {
+        processedImage.src = processedImageData;
+      }
+    </script>
+  </body>
+</html>
