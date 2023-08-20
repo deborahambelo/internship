@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Display Image</title>
     <style>
-      /* Add some styling to center the image and set its max width */
       body {
         display: flex;
         justify-content: center;
@@ -20,7 +19,7 @@
         margin: 0;
       }
       .image-container {
-        max-width: 40%; /* Adjust this value as needed */
+        max-width: 40%;
         padding: 10px;
         text-align: center;
         margin-left: 5%;
@@ -36,31 +35,16 @@
         border-right: 1px solid #ccc;
       }
       #image-container {
-        max-width: 80%; /* Adjust this value as needed */
+        max-width: 80%;
       }
       #selected-image {
-        width: 100%; /* Image will fill the container */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        height: auto;
       }
     </style>
   </head>
 
   <body>
-    <!--<div class="image-container">
-      <h2>Original Image</h2>
-      <img src="uploadedImage.jpg" alt="Original Image" />
-    </div>
-    <div class="image-container">
-      <h2>Processed Image</h2>
-      <img src="processedImage.jpg" alt="Processed Image" />
-    </div>
-    <script>
-      const uploadedImage = localStorage.getItem("uploadedImage");
-      if (uploadedImage) {
-        const imageElement = document.getElementById("uploaded-image");
-        imageElement.src = uploadedImage;
-      }
-    </script>-->
     <div class="image-container">
       <h2>Original Image</h2>
       <img id="originalImage" alt="Original Image" />

@@ -55,7 +55,7 @@ body{
 
 .uploadarea:hover{
     
-     transform: scale(1.05); /* Scale up the div by 10% on hover */
+     transform: scale(1.05); 
     
 }
 
@@ -106,7 +106,7 @@ input[type="file"] {
     align-items: center;
     position: relative;
     overflow: hidden;
-    height: 200px; /* Set the desired height of the container */
+    height: 200px; 
 }
 
 .custom-button {
@@ -127,7 +127,7 @@ input[type="file"] {
     border-radius: 10px;
     font-size: 16px;
  
-    transition: background 0.3s ease, transform 0.3s ease; /* Add transform to the transition */
+    transition: background 0.3s ease, transform 0.3s ease; 
 }
 
 @media screen and (max-width: 830px){
