@@ -41,6 +41,15 @@
         width: 100%;
         height: auto;
       }
+
+      .download-button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
     </style>
   </head>
 
@@ -52,6 +61,7 @@
     <div class="image-container">
       <h2>Processed Image</h2>
       <img id="processedImage" alt="Processed Image" />
+      <button class="download-button" id="downloadProcessed">Download</button>
     </div>
 
     <script>
@@ -68,6 +78,15 @@
       if (processedImageData) {
         processedImage.src = processedImageData;
       }
+      // Add download button functionality
+      const downloadButton = document.getElementById("downloadProcessed");
+      downloadButton.addEventListener("click", () => {
+        const processedImageSrc = processedImage.src;
+        const a = document.createElement("a");
+        a.href = processedImageSrc;
+        a.download = "processed_image.png"; // You can adjust the filename and extension
+        a.click();
+      });
     </script>
   </body>
 </html>
